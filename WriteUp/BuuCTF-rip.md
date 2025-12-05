@@ -59,7 +59,7 @@ p.interactive() # 获取靶机交互式终端
 
 buuCTF-rip把偏移量相当于是直接显示出来了，还不太了解有哪些地方可以用pwndbg，就写了pwndbg计算偏移量的笔记：
 
-##关闭 ASLR（避免地址随机化）
+## 关闭 ASLR（避免地址随机化）
 
 ```shell
 echo 0 | sudo tee /proc/sys/kernel/randomize_va_space
@@ -287,3 +287,4 @@ Segmentation fault (core dumped)
 ## 总结
 
 栈溢出的本质是**程序使用的栈空间超过了系统为其分配的上限**，常见于无限递归或大局部变量。它会导致程序崩溃，虽不一定是安全漏洞，但在开发中需高度重视。理解栈的工作机制有助于编写更健壮、高效的代码。
+
